@@ -27,7 +27,7 @@ colors.head()
 
 # How many distinct colors are available?
 num_colors = colors.shape[0]
-print(num_colors)
+print('Number of distinct color:'+  str(num_colors))
 
 
 # ## 4. Transparent Colors in Lego Sets
@@ -48,10 +48,11 @@ import matplotlib.pyplot as plt
 sets = pd.read_csv('datasets/sets.csv')
 # Create a summary of average number of parts by year: `parts_by_year`
 parts_by_year = sets.groupby('year')['num_parts'].mean()
+print(parts_by_year)
 # Plot trends in average number of parts by year
 plt.plot(parts_by_year)
 plt.xlabel('Year')
-plt.ylabel('Number of parts')
+plt.ylabel('Average Number of parts')
 plt.title('Trend of part by Year')
 plt.show()
 # ## 6. Lego Themes Over Years
